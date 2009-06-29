@@ -1,7 +1,34 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MindmapperCore", "MindmapperCore\MindmapperCore.csproj", "{F83D02EB-2B47-4883-BAD0-2941E71EEC29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MindmapperCoreTest", "MindmapperCoreTest\MindmapperCoreTest.csproj", "{74F32F06-FEDD-466B-A270-D24C41A7CE1A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FC99D9D2-E175-496F-8949-315D2DBDAAEA}"
+	ProjectSection(SolutionItems) = preProject
+		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
+		Mindmapper.vsmdi = Mindmapper.vsmdi
+	EndProjectSection
+EndProject
 Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Mindmapper.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F83D02EB-2B47-4883-BAD0-2941E71EEC29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F83D02EB-2B47-4883-BAD0-2941E71EEC29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F83D02EB-2B47-4883-BAD0-2941E71EEC29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F83D02EB-2B47-4883-BAD0-2941E71EEC29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74F32F06-FEDD-466B-A270-D24C41A7CE1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74F32F06-FEDD-466B-A270-D24C41A7CE1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74F32F06-FEDD-466B-A270-D24C41A7CE1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74F32F06-FEDD-466B-A270-D24C41A7CE1A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection

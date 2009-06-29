@@ -1,0 +1,7 @@
+D:\Studium\Parsing\Mindmapper\MindmapperCore\bin\Debug\MindmapperCore.dll
+D:\Studium\Parsing\Mindmapper\MindmapperCore\bin\Debug\MindmapperCore.pdb
+D:\Studium\Parsing\Mindmapper\MindmapperCore\obj\Debug\ResolveAssemblyReference.cache
+D:\Studium\Parsing\Mindmapper\MindmapperCore\obj\Debug\MindmapperCore.dll
+D:\Studium\Parsing\Mindmapper\MindmapperCore\obj\Debug\MindmapperCore.pdb
+D:\Studium\Parsing\Mindmapper\MindmapperCore\obj\Debug\MindmapperCore.Resources.Messages.resources
+D:\Studium\Parsing\Mindmapper\MindmapperCore\obj\Debug\MindmapperCore.csproj.GenerateResource.Cache
