@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using MindmapperCore.InstructionAttributes;
 
 namespace MindmapperCore.Instructions
 {
@@ -25,8 +26,17 @@ namespace MindmapperCore.Instructions
         /// </summary>
         protected override void CreateAttributeList()
         {
-            InstructionAttribute attribute = new StringAttribute("name", 1);
+            this.AddAttribute(new StringAttribute("name", 1));
 
+        }
+
+        /// <summary>
+        /// Removes an element from the given mindmap datastructure.
+        /// </summary>
+        /// <param name="mindmap">mindmap datastructure</param>
+        public override void ExecuteInstruction(Mindmap mindmap)
+        {
+            throw new NotImplementedException();
         }
     }
 }

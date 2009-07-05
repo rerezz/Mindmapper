@@ -7,12 +7,18 @@ namespace MindmapperCore
 {
     internal class Item
     {
-
         private Dictionary<Directions, ItemConnection> m_Connections;
 
-        public Item()
-        {
+        public string Name { public get; private set; }
+        public string Color { get; set; }
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="name">name of the item</param>
+        public Item(string name)
+        {
+            this.Name = name;
         }
     }
 }

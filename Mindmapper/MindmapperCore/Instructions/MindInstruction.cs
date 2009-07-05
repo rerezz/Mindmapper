@@ -27,10 +27,17 @@ namespace MindmapperCore.Instructions
         /// </summary>
         protected override void CreateAttributeList()
         {
-            InstructionAttribute attribute = new StringAttribute("name", 1);
-            
+            this.AddAttribute(new StringAttribute("name", 1));
+            this.AddAttribute(new StringAttribute("color", 2));
+        }
 
-
+        /// <summary>
+        /// Adds a new element to the given mindmap datastructure.
+        /// </summary>
+        /// <param name="mindmap">mindmap datastructure</param>
+        public override void ExecuteInstruction(Mindmap mindmap)
+        {
+            mindmap.AddItem(this.GetAttributeValue("name"), this.GetAttributeValue("color"));
         }
     }
 }

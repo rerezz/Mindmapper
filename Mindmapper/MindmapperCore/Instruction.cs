@@ -31,6 +31,36 @@ namespace MindmapperCore
         }
 
         /// <summary>
+        /// Set an attribute value by attribute name
+        /// </summary>
+        /// <param name="attributeName">name of the attribute</param>
+        /// <param name="attributeValue">string value of the attribute</param>
+        public void SetAttributeValueByName(string attributeName, string attributeValue)
+        {
+            m_AttributesByName[attributeName].SetAttributeValue(attributeName);
+        }
+
+        /// <summary>
+        /// Set an attribute value by position
+        /// </summary>
+        /// <param name="position">attribute position</param>
+        /// <param name="attributeValue">string value of the attribute</param>
+        public void SetAttributeValueByPosition(int position, string attributeValue)
+        {
+            m_AttributesByPosition[position].SetAttributeValue(attributeValue);
+        }
+
+        /// <summary>
+        /// Gets the attribute value string from the attribute with the given name
+        /// </summary>
+        /// <param name="name">attribute name</param>
+        /// <returns>attribute value string</returns>
+        public string GetAttributeValue(string name)
+        {
+            return m_AttributesByName[name].AttributeValueString;
+        }
+
+        /// <summary>
         /// Add the given instruction to the attribute lists (by name and position)
         /// </summary>
         /// <param name="attribute">attribute </param>
@@ -45,6 +75,10 @@ namespace MindmapperCore
         /// </summary>
         protected abstract void CreateAttributeList();
 
-
+        /// <summary>
+        /// Executes the instruction on the given mindmap structure.
+        /// </summary>
+        /// <param name="mindmap">mindmap datastructure</param>
+        public abstract void ExecuteInstruction(Mindmap mindmap);
     }
 }

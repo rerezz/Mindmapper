@@ -5,3 +5,5 @@ D:\Studium\Parsing\Mindmapper\MindmapperCoreTest\bin\Debug\MindmapperCore.pdb
 D:\Studium\Parsing\Mindmapper\MindmapperCoreTest\obj\Debug\ResolveAssemblyReference.cache
 D:\Studium\Parsing\Mindmapper\MindmapperCoreTest\obj\Debug\MindmapperCoreTest.dll
 D:\Studium\Parsing\Mindmapper\MindmapperCoreTest\obj\Debug\MindmapperCoreTest.pdb
+D:\Studium\Parsing\Mindmapper\MindmapperCoreTest\bin\Debug\MindmapperCore_Accessor.dll
+D:\Studium\Parsing\Mindmapper\MindmapperCoreTest\bin\Debug\MindmapperCore_Accessor.pdb

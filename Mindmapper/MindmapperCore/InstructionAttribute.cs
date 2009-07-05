@@ -24,7 +24,7 @@ namespace MindmapperCore
         /// <summary>
         /// String value of the attribute.
         /// </summary>
-        protected string AttributeValueString { get; set; }
+        public string AttributeValueString { public get; protected set; }
 
         /// <summary>
         /// Constructor

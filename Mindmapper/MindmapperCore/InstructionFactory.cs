@@ -10,14 +10,14 @@ namespace MindmapperCore
     /// <summary>
     /// Factory who gives the instruction for a given codeText
     /// </summary>
-    internal class InstructionFactory
+    internal static class InstructionFactory
     {
         /// <summary>
         /// Tries to get the correct instruction for the given code text.
         /// </summary>
         /// <param name="codeText">Instruction code text</param>
         /// <returns>Instruction class</returns>
-        public Instruction GetInstruction(string codeText)
+        public static Instruction GetInstruction(string codeText)
         {
             Instruction resultInstruction = null;
 

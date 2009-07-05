@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using MindmapperCore.Resources;
+using MindmapperCore.Instructions;
 
 namespace MindmapperCoreTest
 {
@@ -69,12 +70,11 @@ namespace MindmapperCoreTest
         [TestMethod()]
         public void GetInstructionTest01()
         {
-            InstructionFactory target = new InstructionFactory();
             string codeText = string.Empty;
             Instruction actual;
             try
             {
-                actual = target.GetInstruction(codeText);
+                actual = InstructionFactory.GetInstruction(codeText);
             }
             catch (Exception exeption)
             {
@@ -89,12 +89,11 @@ namespace MindmapperCoreTest
         [TestMethod()]
         public void GetInstructionTest02()
         {
-            InstructionFactory target = new InstructionFactory();
             string codeText = "invalidinstruction";
             Instruction actual;
             try
             {
-                actual = target.GetInstruction(codeText);
+                actual = InstructionFactory.GetInstruction(codeText);
             }
             catch (Exception exeption)
             {
@@ -109,11 +108,10 @@ namespace MindmapperCoreTest
         [TestMethod()]
         public void GetInstructionTest03()
         {
-            InstructionFactory target = new InstructionFactory();
             string codeText = "mind";
             Instruction actual;
 
-            actual = target.GetInstruction(codeText);
+            actual = InstructionFactory.GetInstruction(codeText);
 
             Assert.IsTrue(actual is MindInstruction, "incorrect instruction type given");
         }
@@ -124,11 +122,10 @@ namespace MindmapperCoreTest
         [TestMethod()]
         public void GetInstructionTest04()
         {
-            InstructionFactory target = new InstructionFactory();
             string codeText = "forget";
             Instruction actual;
 
-            actual = target.GetInstruction(codeText);
+            actual = InstructionFactory.GetInstruction(codeText);
 
             Assert.IsTrue(actual is ForgetInstruction, "incorrect instruction type given");
         }
