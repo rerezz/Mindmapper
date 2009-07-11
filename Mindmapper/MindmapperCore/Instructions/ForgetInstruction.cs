@@ -36,7 +36,7 @@ namespace MindmapperCore.Instructions
         /// <param name="mindmap">mindmap datastructure</param>
         public override void ExecuteInstruction(Mindmap mindmap)
         {
-            throw new NotImplementedException();
+            mindmap.RemoveItem(this.GetAttributeValue("name"));
         }
     }
 }

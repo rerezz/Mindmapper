@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="InstructionFactoryTest.cs" />
+    <Compile Include="MainControllerTest.cs" />
     <Compile Include="ParserTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

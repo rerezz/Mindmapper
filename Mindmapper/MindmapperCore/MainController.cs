@@ -13,6 +13,14 @@ namespace MindmapperCore
         private Mindmap m_Mindmap;
         private Parser m_Parser;
 
+        public Mindmap Mindmap
+        {
+            get
+            {
+                return m_Mindmap;
+            }
+        }
+
         /// <summary>
         /// Constructor
         /// </summary>

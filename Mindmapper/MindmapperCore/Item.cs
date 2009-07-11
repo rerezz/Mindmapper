@@ -7,10 +7,18 @@ namespace MindmapperCore
 {
     internal class Item
     {
-        private Dictionary<Directions, ItemConnection> m_Connections;
+        private Dictionary<ConnectionDirections.Direction, ItemConnection> m_Connections;
 
-        public string Name { public get; private set; }
+        public string Name { get; private set; }
         public string Color { get; set; }
+        public string Caption { get; set; }
+        public Dictionary<ConnectionDirections.Direction, ItemConnection> Connections
+        {
+            get
+            {
+                return m_Connections;
+            }
+        }
 
         /// <summary>
         /// Constructor
@@ -19,6 +27,35 @@ namespace MindmapperCore
         public Item(string name)
         {
             this.Name = name;
+            m_Connections = new Dictionary<ConnectionDirections.Direction, ItemConnection>();
         }
+
+        /// <summary>
+        /// Register the connection at the item
+        /// </summary>
+        /// <param name="direction">direction of the connection</param>
+        /// <param name="connection">connection</param>
+        public void AddConnection(ConnectionDirections.Direction direction, ItemConnection connection)
+        {
+            m_Connections.Add(direction, connection);
+        }
+
+        /// <summary>
+        /// Releases all connections of the item
+        /// </summary>
+        public void ReleaseConnections()
+        {
+            m_Connections = null;
+        }
+
+        /// <summary>
+        /// Releases the given connection from the item
+        /// </summary>
+        /// <param name="connection"></param>
+        public void ReleaseConnectionFromItem(ConnectionDirections.Direction direction)
+        {
+            m_Connections.Remove(direction);
+        }
+
     }
 }

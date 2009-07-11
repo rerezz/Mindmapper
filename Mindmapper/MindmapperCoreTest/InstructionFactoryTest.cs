@@ -129,5 +129,117 @@ namespace MindmapperCoreTest
 
             Assert.IsTrue(actual is ForgetInstruction, "incorrect instruction type given");
         }
+
+        /// <summary>
+        /// Test for north instruction.
+        /// </summary>
+        [TestMethod()]
+        public void GetInstructionTest05()
+        {
+            string codeText = "north";
+            Instruction actual;
+
+            actual = InstructionFactory.GetInstruction(codeText);
+
+            Assert.IsTrue(actual is NorthInstruction, "incorrect instruction type given");
+        }
+
+        /// <summary>
+        /// Test for south instruction.
+        /// </summary>
+        [TestMethod()]
+        public void GetInstructionTest06()
+        {
+            string codeText = "south";
+            Instruction actual;
+
+            actual = InstructionFactory.GetInstruction(codeText);
+
+            Assert.IsTrue(actual is SouthInstruction, "incorrect instruction type given");
+        }
+
+        /// <summary>
+        /// Test for east instruction.
+        /// </summary>
+        [TestMethod()]
+        public void GetInstructionTest07()
+        {
+            string codeText = "east";
+            Instruction actual;
+
+            actual = InstructionFactory.GetInstruction(codeText);
+
+            Assert.IsTrue(actual is EastInstruction, "incorrect instruction type given");
+        }
+
+        /// <summary>
+        /// Test for west instruction.
+        /// </summary>
+        [TestMethod()]
+        public void GetInstructionTest08()
+        {
+            string codeText = "west";
+            Instruction actual;
+
+            actual = InstructionFactory.GetInstruction(codeText);
+
+            Assert.IsTrue(actual is WestInstruction, "incorrect instruction type given");
+        }
+
+        /// <summary>
+        /// Test for northeast instruction.
+        /// </summary>
+        [TestMethod()]
+        public void GetInstructionTest09()
+        {
+            string codeText = "northeast";
+            Instruction actual;
+
+            actual = InstructionFactory.GetInstruction(codeText);
+
+            Assert.IsTrue(actual is NorthEastInstruction, "incorrect instruction type given");
+        }
+
+        /// <summary>
+        /// Test for northwest instruction.
+        /// </summary>
+        [TestMethod()]
+        public void GetInstructionTest10()
+        {
+            string codeText = "northwest";
+            Instruction actual;
+
+            actual = InstructionFactory.GetInstruction(codeText);
+
+            Assert.IsTrue(actual is NorthWestInstruction, "incorrect instruction type given");
+        }
+
+        /// <summary>
+        /// Test for southeast instruction.
+        /// </summary>
+        [TestMethod()]
+        public void GetInstructionTest11()
+        {
+            string codeText = "southeast";
+            Instruction actual;
+
+            actual = InstructionFactory.GetInstruction(codeText);
+
+            Assert.IsTrue(actual is SouthEastInstruction, "incorrect instruction type given");
+        }
+
+        /// <summary>
+        /// Test for southwest instruction.
+        /// </summary>
+        [TestMethod()]
+        public void GetInstructionTest12()
+        {
+            string codeText = "southwest";
+            Instruction actual;
+
+            actual = InstructionFactory.GetInstruction(codeText);
+
+            Assert.IsTrue(actual is SouthWestInstruction, "incorrect instruction type given");
+        }
     }
 }

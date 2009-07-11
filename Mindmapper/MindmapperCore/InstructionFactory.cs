@@ -31,6 +31,38 @@ namespace MindmapperCore
                     resultInstruction = new ForgetInstruction(codeText);
                     break;
 
+                case "north":
+                    resultInstruction = new NorthInstruction(codeText);
+                    break;
+
+                case "south":
+                    resultInstruction = new SouthInstruction(codeText);
+                    break;
+
+                case "east":
+                    resultInstruction = new EastInstruction(codeText);
+                    break;
+
+                case "west":
+                    resultInstruction = new WestInstruction(codeText);
+                    break;
+
+                case "northeast":
+                    resultInstruction = new NorthEastInstruction(codeText);
+                    break;
+
+                case "northwest":
+                    resultInstruction = new NorthWestInstruction(codeText);
+                    break;
+
+                case "southeast":
+                    resultInstruction = new SouthEastInstruction(codeText);
+                    break;
+
+                case "southwest":
+                    resultInstruction = new SouthWestInstruction(codeText);
+                    break;
+
                 default:
                     throw new SyntaxException(String.Format(Messages.ERROR_INVALID_INSTRUCTION,codeText));
             }

@@ -24,7 +24,7 @@ namespace MindmapperCore
         /// <summary>
         /// String value of the attribute.
         /// </summary>
-        public string AttributeValueString { public get; protected set; }
+        public string AttributeValueString { get; protected set; }
 
         /// <summary>
         /// Constructor
@@ -37,6 +37,20 @@ namespace MindmapperCore
             AttributeName = attributeName;
             AttributePosition = attributePosition;
             SetDefaultValue();
+        }
+
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="attributeName">name of the attribute</param>
+        /// <param name="attributePosition">position in the instruction attributelist</param>
+        /// <param name="attributePosition">initial value for attribute</param>
+        public InstructionAttribute(string attributeName, int attributePosition, string defaultValue)
+            : base(attributeName)
+        {
+            AttributeName = attributeName;
+            AttributePosition = attributePosition;
+            AttributeValueString = defaultValue;
         }
 
         /// <summary>
