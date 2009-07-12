@@ -57,5 +57,14 @@ namespace MindmapperCore
             m_Connections.Remove(direction);
         }
 
+        /// <summary>
+        /// tostring gets the name of the item.
+        /// </summary>
+        /// <returns>item name</returns>
+        public override string ToString()
+        {
+            return String.Format("{0}({1})", this.Name, this.Caption);
+        }
+
     }
 }

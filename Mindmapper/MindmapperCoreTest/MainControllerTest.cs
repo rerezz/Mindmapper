@@ -13,8 +13,6 @@ namespace MindmapperCoreTest
     [TestClass()]
     public class MainControllerTest
     {
-
-
         private TestContext testContextInstance;
 
         /// <summary>
@@ -70,7 +68,7 @@ namespace MindmapperCoreTest
         [TestMethod()]
         public void ExecuteInstructionTest01()
         {
-            MainController target = new MainController();
+            MainController target = new MainController(null);
             string instruction = "mind land1 schweiz red";
             target.ExecuteInstruction(instruction);
 
@@ -79,6 +77,11 @@ namespace MindmapperCoreTest
             instruction = "north land2 frankreich blue false";
             target.ExecuteInstruction(instruction);
 
+            instruction = "south land3 italien green false";
+            target.ExecuteInstruction(instruction);
+
+            instruction = "forget land2";
+            target.ExecuteInstruction(instruction);
         }
     }
 }

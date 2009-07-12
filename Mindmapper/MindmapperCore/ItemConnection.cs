@@ -27,16 +27,32 @@ namespace MindmapperCore
         /// <param name="itemFrom">item from with the deletion is executed.</param>
         public void ReleaseConnection(Item itemFrom,ConnectionDirections.Direction directionFrom)
         {
-            if (m_ItemOne.Name == itemFrom.Name)
+            GetOtherItem(itemFrom.Name).ReleaseConnectionFromItem(ConnectionDirections.GetOppositeDirection(directionFrom));
+
+            m_ItemOne = null;
+            m_ItemTwo = null;
+        }
+
+        /// <summary>
+        /// Returns the other item from the connection
+        /// </summary>
+        /// <param name="name">name of one item</param>
+        /// <returns>other item</returns>
+        public Item GetOtherItem(string name)
+        {
+            if (m_ItemOne.Name == name)
             {
-                m_ItemTwo.ReleaseConnectionFromItem(ConnectionDirections.GetOppositeDirection(directionFrom));
+                return m_ItemTwo;
             }
             else
             {
-                m_ItemOne.ReleaseConnectionFromItem(ConnectionDirections.GetOppositeDirection(directionFrom));
+                return m_ItemOne;
             }
-            m_ItemOne = null;
-            m_ItemTwo = null;
+        }
+
+        public override string ToString()
+        {
+            return String.Format("Connection between {0} and {1}", m_ItemOne.ToString(), m_ItemTwo.ToString());
         }
     }
 }

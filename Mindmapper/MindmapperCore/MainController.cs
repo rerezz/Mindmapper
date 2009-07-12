@@ -2,18 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Controls;
 
 namespace MindmapperCore
 {
     /// <summary>
     /// Central controlling class.
     /// </summary>
-    internal class MainController
+    public class MainController
     {
         private Mindmap m_Mindmap;
         private Parser m_Parser;
 
-        public Mindmap Mindmap
+        internal Mindmap Mindmap
         {
             get
             {
@@ -24,9 +25,10 @@ namespace MindmapperCore
         /// <summary>
         /// Constructor
         /// </summary>
-        public MainController()
+        public MainController(Canvas canvas)
         {
             m_Mindmap = new Mindmap();
+            m_Mindmap.Attach(new MindmapObserver(m_Mindmap,new DisplayController(canvas)));
             m_Parser = new Parser();
         }
 
@@ -38,6 +40,7 @@ namespace MindmapperCore
         {
             Instruction actualInstruction = m_Parser.Parse(instruction);
             actualInstruction.ExecuteInstruction(m_Mindmap);
+            m_Mindmap.Notify();
         }
 
     }

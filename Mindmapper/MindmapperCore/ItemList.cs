@@ -53,6 +53,19 @@ namespace MindmapperCore
         {
             Item removedItem = m_Items[name];
             m_Items.Remove(name);
+
+            if (ActiveItem.Name == removedItem.Name)
+            {
+                if (m_Items.Count > 0)
+                {
+                    ActiveItem = m_Items.Values.First<Item>();
+                }
+                else
+                {
+                    ActiveItem = null;
+                }
+            }
+
             return removedItem;
         }
 
@@ -73,6 +86,15 @@ namespace MindmapperCore
         public Item GetItem(string name)
         {
             return m_Items[name];
+        }
+
+        /// <summary>
+        /// Gets the first added item
+        /// </summary>
+        /// <returns>item</returns>
+        public Item GetFirstItem()
+        {
+            return m_Items.Values.First<Item>();
         }
     }
 }

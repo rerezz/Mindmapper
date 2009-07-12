@@ -1,0 +1,9 @@
+﻿<Window x:Class="MindmapperGui.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Mindmapper" Height="600" Width="800" Name="Main">
+    <Grid>
+        <Canvas Name="cvsBoard" Margin="0,0,261,0" Width="Auto" Height="Auto" />
+        <TextBox HorizontalAlignment="Right" Name="txtCommand" Width="243" BorderBrush="Black" Margin="0,11,11,9" AcceptsReturn="True" Background="White" Foreground="Black" />
+    </Grid>
+</Window>

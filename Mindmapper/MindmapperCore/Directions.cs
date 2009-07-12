@@ -12,7 +12,7 @@ namespace MindmapperCore
         /// </summary>
         public enum Direction : int
         {
-            North, South, East, West, NorthEast, SouthEast, NorthWest, SouthWest
+            North, South, East, West, NorthEast, SouthEast, NorthWest, SouthWest, None
         }
 
         /// <summary>
@@ -41,7 +41,7 @@ namespace MindmapperCore
                 case Direction.SouthWest:
                     return Direction.NorthEast;
                 default:
-                    return direction;
+                    return Direction.None;
             }
         }
     }

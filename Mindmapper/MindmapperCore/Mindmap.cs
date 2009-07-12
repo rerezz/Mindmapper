@@ -8,7 +8,7 @@ namespace MindmapperCore
     /// <summary>
     /// The mindmap class holds the mindmap datastructure.
     /// </summary>
-    internal class Mindmap
+    internal class Mindmap : ObserverSubject
     {
         private ItemList m_Items;
         private ItemConnectionList m_ItemConnections;
@@ -73,7 +73,14 @@ namespace MindmapperCore
             
         }
 
-
+        /// <summary>
+        /// Returns the first added item
+        /// </summary>
+        /// <returns>item</returns>
+        public Item GetFirstItem()
+        {
+            return m_Items.GetFirstItem();
+        }
 
 
     }
