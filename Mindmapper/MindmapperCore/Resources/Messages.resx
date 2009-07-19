@@ -117,7 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ERROR_ILLEGAL_CHAR" xml:space="preserve">
+    <value>Illegal character {0} detected</value>
+  </data>
   <data name="ERROR_INVALID_INSTRUCTION" xml:space="preserve">
-    <value>"Unknown instruction {0}"</value>
+    <value>Unknown instruction {0}</value>
+  </data>
+  <data name="ERROR_IVALID_ATTRIBUTE_COUNT" xml:space="preserve">
+    <value>Invalid number of given attributes (Attributelist: [{0}])</value>
   </data>
 </root>

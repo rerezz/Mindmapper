@@ -185,6 +185,48 @@ namespace MindmapperCore
                     position[2] = position[0] - CONNECTION_LENGTH;
                     position[3] = position[1];
                     break;
+                case ConnectionDirections.Direction.South:
+                    position[0] = top + ITEM_HEIGTH;
+                    position[1] = left + ITEM_WIDTH / 2;
+                    position[2] = position[0] + CONNECTION_LENGTH;
+                    position[3] = position[1];
+                    break;
+                case ConnectionDirections.Direction.East:
+                    position[0] = top + ITEM_HEIGTH / 2;
+                    position[1] = left + ITEM_WIDTH;
+                    position[2] = position[0];
+                    position[3] = position[1] + CONNECTION_LENGTH;
+                    break;
+                case ConnectionDirections.Direction.West:
+                    position[0] = top + ITEM_HEIGTH / 2;
+                    position[1] = left;
+                    position[2] = position[0];
+                    position[3] = position[1] - CONNECTION_LENGTH;
+                    break;
+                case ConnectionDirections.Direction.NorthWest:
+                    position[0] = top + ITEM_HEIGTH / 6;
+                    position[1] = left + ITEM_WIDTH / 6;
+                    position[2] = position[0] - GetDiagonalConnectorY();
+                    position[3] = position[1] - GetDiagonalConnectorX();
+                    break;
+                case ConnectionDirections.Direction.NorthEast:
+                    position[0] = top + ITEM_HEIGTH / 6;
+                    position[1] = left + 5 * ITEM_WIDTH / 6;
+                    position[2] = position[0] - GetDiagonalConnectorY();
+                    position[3] = position[1] + GetDiagonalConnectorX();
+                    break;
+                case ConnectionDirections.Direction.SouthEast:
+                    position[0] = top + 5 * ITEM_HEIGTH / 6;
+                    position[1] = left + 5 * ITEM_WIDTH / 6;
+                    position[2] = position[0] + GetDiagonalConnectorY();
+                    position[3] = position[1] + GetDiagonalConnectorX();
+                    break;
+                case ConnectionDirections.Direction.SouthWest:
+                    position[0] = top + 5 * ITEM_HEIGTH / 6;
+                    position[1] = left + ITEM_WIDTH / 6;
+                    position[2] = position[0] + GetDiagonalConnectorY();
+                    position[3] = position[1] - GetDiagonalConnectorX();
+                    break;
                 default:
                     position[0] = top;
                     position[1] = left;
@@ -192,6 +234,25 @@ namespace MindmapperCore
             }
 
             return position;
+        }
+
+
+        /// <summary>
+        /// Gets the x part of the diagonal connection vector
+        /// </summary>
+        /// <returns>length of x part</returns>
+        private static int GetDiagonalConnectorX()
+        {
+            return Convert.ToInt32(Math.Sqrt((CONNECTION_LENGTH * CONNECTION_LENGTH) / 2));
+        }
+
+        /// <summary>
+        /// Gets the y part of the diagonal connection vector
+        /// </summary>
+        /// <returns>length of y part</returns>
+        private static int GetDiagonalConnectorY()
+        {
+            return Convert.ToInt32(Math.Sqrt((CONNECTION_LENGTH * CONNECTION_LENGTH) / 2));
         }
 
         /// <summary>
@@ -207,9 +268,37 @@ namespace MindmapperCore
 
             switch (direction)
             {
+                case ConnectionDirections.Direction.North:
+                    position[0] = top;
+                    position[1] = left - ITEM_WIDTH / 2;
+                    break;
                 case ConnectionDirections.Direction.South:
                     position[0] = top - ITEM_HEIGTH;
                     position[1] = left - ITEM_WIDTH / 2;
+                    break;
+                case ConnectionDirections.Direction.East:
+                    position[0] = top - ITEM_HEIGTH / 2;
+                    position[1] = left - ITEM_WIDTH;
+                    break;
+                case ConnectionDirections.Direction.West:
+                    position[0] = top - ITEM_HEIGTH / 2;
+                    position[1] = left;
+                    break;
+                case ConnectionDirections.Direction.NorthEast:
+                    position[0] = top - ITEM_HEIGTH / 6;
+                    position[1] = left - 5 * ITEM_WIDTH / 6;
+                    break;
+                case ConnectionDirections.Direction.NorthWest:
+                    position[0] = top - ITEM_HEIGTH / 6;
+                    position[1] = left - ITEM_WIDTH / 6;
+                    break;
+                case ConnectionDirections.Direction.SouthEast:
+                    position[0] = top - 5*ITEM_HEIGTH / 6;
+                    position[1] = left - 5 * ITEM_WIDTH / 6;
+                    break;
+                case ConnectionDirections.Direction.SouthWest:
+                    position[0] = top - 5 * ITEM_HEIGTH / 6;
+                    position[1] = left - ITEM_WIDTH / 6;
                     break;
                 default:
                     position[0] = top;

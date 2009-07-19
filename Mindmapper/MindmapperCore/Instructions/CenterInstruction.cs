@@ -6,11 +6,7 @@ using MindmapperCore.InstructionAttributes;
 
 namespace MindmapperCore.Instructions
 {
-    /// <summary>
-    /// Instruction for delete an existing item.
-    /// Example: forget Länder
-    /// </summary>
-    internal class ForgetInstruction : Instruction
+    internal class CenterInstruction: Instruction
     {
         /// <summary>
         /// Minimal attribute count
@@ -32,27 +28,22 @@ namespace MindmapperCore.Instructions
         /// Constructor
         /// </summary>
         /// <param name="codeText">Original code for this code part.</param>
-        public ForgetInstruction(string codeText)
+        public CenterInstruction(string codeText)
             : base(codeText)
         {
         }
 
         /// <summary>
-        /// Creates the Attribute list for the forget Instruction
+        /// Creates the attribute list for the center instruction
         /// </summary>
         protected override void CreateAttributeList()
         {
             this.AddAttribute(new StringAttribute("name", 1));
-
         }
 
-        /// <summary>
-        /// Removes an element from the given mindmap datastructure.
-        /// </summary>
-        /// <param name="mindmap">mindmap datastructure</param>
         public override void ExecuteInstruction(Mindmap mindmap)
         {
-            mindmap.RemoveItem(this.GetAttributeValue("name"));
+            mindmap.SetActiveItem(this.GetAttributeValue("name"));
         }
     }
 }

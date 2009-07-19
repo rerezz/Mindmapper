@@ -13,6 +13,22 @@ namespace MindmapperCore.Instructions
     internal class MindInstruction : Instruction
     {
         /// <summary>
+        /// Minimal attribute count
+        /// </summary>
+        public override int AttributeCountMin
+        {
+            get { return 2; }
+        }
+
+        /// <summary>
+        /// Maximal attribute count
+        /// </summary>
+        public override int AttributeCountMax
+        {
+            get { return 4; }
+        }
+
+        /// <summary>
         /// Constructor
         /// </summary>
         /// <param name="codeText">Original code for this code part.</param>
@@ -28,7 +44,7 @@ namespace MindmapperCore.Instructions
         {
             this.AddAttribute(new StringAttribute("name", 1, Guid.NewGuid().ToString()));
             this.AddAttribute(new StringAttribute("caption", 2));
-            this.AddAttribute(new StringAttribute("color", 3));
+            this.AddAttribute(new StringAttribute("color", 3, "black"));
             this.AddAttribute(new StringAttribute("activation",4,"true"));
         }
 

@@ -61,11 +61,29 @@ namespace MindmapperCore.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &quot;Unknown instruction {0}&quot;.
+        ///   Looks up a localized string similar to Illegal character {0} detected.
+        /// </summary>
+        internal static string ERROR_ILLEGAL_CHAR {
+            get {
+                return ResourceManager.GetString("ERROR_ILLEGAL_CHAR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unknown instruction {0}.
         /// </summary>
         internal static string ERROR_INVALID_INSTRUCTION {
             get {
                 return ResourceManager.GetString("ERROR_INVALID_INSTRUCTION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid number of given attributes (Attributelist: [{0}]).
+        /// </summary>
+        internal static string ERROR_IVALID_ATTRIBUTE_COUNT {
+            get {
+                return ResourceManager.GetString("ERROR_IVALID_ATTRIBUTE_COUNT", resourceCulture);
             }
         }
     }

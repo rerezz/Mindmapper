@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Windows.Controls;
+using System.Windows;
 
 namespace MindmapperCore
 {
@@ -38,9 +39,16 @@ namespace MindmapperCore
         /// <param name="instruction">instruction</param>
         public void ExecuteInstruction(string instruction)
         {
-            Instruction actualInstruction = m_Parser.Parse(instruction);
-            actualInstruction.ExecuteInstruction(m_Mindmap);
-            m_Mindmap.Notify();
+            try
+            {
+                Instruction actualInstruction = m_Parser.Parse(instruction);
+                actualInstruction.ExecuteInstruction(m_Mindmap);
+                m_Mindmap.Notify();
+            }
+            catch (SyntaxException es)
+            {
+                MessageBox.Show(es.Message);
+            }
         }
 
     }

@@ -61,6 +61,7 @@
     <Compile Include="InstructionAttribute.cs" />
     <Compile Include="InstructionAttributes\StringAttribute.cs" />
     <Compile Include="InstructionFactory.cs" />
+    <Compile Include="Instructions\CenterInstruction.cs" />
     <Compile Include="Instructions\EastInstruction.cs" />
     <Compile Include="Instructions\ForgetInstruction.cs" />
     <Compile Include="Instructions\MindInstruction.cs" />

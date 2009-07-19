@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using MindmapperCore.Resources;
 
 namespace MindmapperCore
 {
@@ -43,11 +44,19 @@ namespace MindmapperCore
         /// <returns>Instruction class with attribute values</returns>
         public Instruction Parse()
         {
+            CheckIllegalCharacters(Production);
             Production = RemoveIrrelevantSpaces(Production);
             List<string> splittedProduction = SplittProduction(Production);
             string[] attribute;
 
             Instruction currentInstruction = InstructionFactory.GetInstruction(splittedProduction[0]);
+
+            // instruction at position 0
+            if (currentInstruction.AttributeCountMin > splittedProduction.Count - 1
+                || currentInstruction.AttributeCountMax < splittedProduction.Count - 1)
+            {
+                throw new SyntaxException(String.Format(Messages.ERROR_IVALID_ATTRIBUTE_COUNT,currentInstruction.GetAttributeListString()));
+            }
 
             // set attributes (do not loop over the instruction at position 0)
             for (int i = 1; i < splittedProduction.Count; i++)
@@ -99,6 +108,22 @@ namespace MindmapperCore
             splittedProduction.AddRange(production.Split(' ')); 
 
             return splittedProduction;
+        }
+
+
+        /// <summary>
+        /// Checks if the production contains any illegal chars
+        /// </summary>
+        /// <param name="production">line of code</param>
+        private void CheckIllegalCharacters(string production)
+        {
+            foreach (char chr in production)
+            {
+                if (!((char.IsLower(chr) && char.IsLetter(chr)) || char.IsDigit(chr)))
+                {
+                    throw new SyntaxException(String.Format(Messages.ERROR_ILLEGAL_CHAR,chr));
+                }
+            }
         }
 
     }

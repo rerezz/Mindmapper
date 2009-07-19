@@ -21,6 +21,22 @@ namespace MindmapperCore
         private Dictionary<int, InstructionAttribute> m_AttributesByPosition = new Dictionary<int,InstructionAttribute>();
 
         /// <summary>
+        /// Instruktion must get minimal count of attributes
+        /// </summary>
+        public abstract int AttributeCountMin
+        {
+            get;
+        }
+
+        /// <summary>
+        /// Instruktion must get maximal count of attributes
+        /// </summary>
+        public abstract int AttributeCountMax
+        {
+            get;
+        }
+
+        /// <summary>
         /// Constructor 
         /// </summary>
         /// <param name="codeText">Original code for this code part.</param>
@@ -80,5 +96,26 @@ namespace MindmapperCore
         /// </summary>
         /// <param name="mindmap">mindmap datastructure</param>
         public abstract void ExecuteInstruction(Mindmap mindmap);
+
+        /// <summary>
+        /// Creates a comma seperated string with all attribute names
+        /// </summary>
+        /// <returns>attribute list</returns>
+        public string GetAttributeListString()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            foreach (string name in m_AttributesByName.Keys)
+            {
+                if (sb.Length > 0)
+                {
+                    sb.Append(';');
+                }
+
+                sb.Append(name);
+            }
+
+            return sb.ToString();
+        }
     }
 }

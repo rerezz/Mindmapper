@@ -63,6 +63,10 @@ namespace MindmapperCore
                     resultInstruction = new SouthWestInstruction(codeText);
                     break;
 
+                case "center":
+                    resultInstruction = new CenterInstruction(codeText);
+                    break;
+
                 default:
                     throw new SyntaxException(String.Format(Messages.ERROR_INVALID_INSTRUCTION,codeText));
             }
