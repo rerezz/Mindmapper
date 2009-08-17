@@ -119,7 +119,7 @@ namespace MindmapperCore
         {
             foreach (char chr in production)
             {
-                if (!((char.IsLower(chr) && char.IsLetter(chr)) || char.IsDigit(chr)))
+                if (!(char.IsLetterOrDigit(chr) || char.IsWhiteSpace(chr) || chr.Equals('=')))
                 {
                     throw new SyntaxException(String.Format(Messages.ERROR_ILLEGAL_CHAR,chr));
                 }

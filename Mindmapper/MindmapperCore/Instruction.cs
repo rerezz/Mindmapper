@@ -53,7 +53,7 @@ namespace MindmapperCore
         /// <param name="attributeValue">string value of the attribute</param>
         public void SetAttributeValueByName(string attributeName, string attributeValue)
         {
-            m_AttributesByName[attributeName].SetAttributeValue(attributeName);
+            m_AttributesByName[attributeName].SetAttributeValue(attributeValue);
         }
 
         /// <summary>
