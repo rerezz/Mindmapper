@@ -1,0 +1,14 @@
+D:\Studium\Parsing\Mindmapper\MindmapperGui\bin\Release\MindmapperGui.exe
+D:\Studium\Parsing\Mindmapper\MindmapperGui\bin\Release\MindmapperGui.pdb
+D:\Studium\Parsing\Mindmapper\MindmapperGui\bin\Release\MindmapperCore.dll
+D:\Studium\Parsing\Mindmapper\MindmapperGui\bin\Release\MindmapperCore.pdb
+D:\Studium\Parsing\Mindmapper\MindmapperGui\obj\Release\ResolveAssemblyReference.cache
+D:\Studium\Parsing\Mindmapper\MindmapperGui\obj\Release\Window1.baml
+D:\Studium\Parsing\Mindmapper\MindmapperGui\obj\Release\Window1.g.cs
+D:\Studium\Parsing\Mindmapper\MindmapperGui\obj\Release\App.g.cs
+D:\Studium\Parsing\Mindmapper\MindmapperGui\obj\Release\MindmapperGui_MarkupCompile.cache
+D:\Studium\Parsing\Mindmapper\MindmapperGui\obj\Release\MindmapperGui.g.resources
+D:\Studium\Parsing\Mindmapper\MindmapperGui\obj\Release\MindmapperGui.Properties.Resources.resources
+D:\Studium\Parsing\Mindmapper\MindmapperGui\obj\Release\MindmapperGui.csproj.GenerateResource.Cache
+D:\Studium\Parsing\Mindmapper\MindmapperGui\obj\Release\MindmapperGui.exe
+D:\Studium\Parsing\Mindmapper\MindmapperGui\obj\Release\MindmapperGui.pdb

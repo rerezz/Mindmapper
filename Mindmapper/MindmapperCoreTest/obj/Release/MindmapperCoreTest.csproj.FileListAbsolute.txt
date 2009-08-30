@@ -1,0 +1,9 @@
+D:\Studium\Parsing\Mindmapper\MindmapperCoreTest\bin\Release\MindmapperCoreTest.dll
+D:\Studium\Parsing\Mindmapper\MindmapperCoreTest\bin\Release\MindmapperCoreTest.pdb
+D:\Studium\Parsing\Mindmapper\MindmapperCoreTest\bin\Release\MindmapperCore.dll
+D:\Studium\Parsing\Mindmapper\MindmapperCoreTest\bin\Release\MindmapperCore.pdb
+D:\Studium\Parsing\Mindmapper\MindmapperCoreTest\bin\Release\MindmapperCore_Accessor.dll
+D:\Studium\Parsing\Mindmapper\MindmapperCoreTest\bin\Release\MindmapperCore_Accessor.pdb
+D:\Studium\Parsing\Mindmapper\MindmapperCoreTest\obj\Release\ResolveAssemblyReference.cache
+D:\Studium\Parsing\Mindmapper\MindmapperCoreTest\obj\Release\MindmapperCoreTest.dll
+D:\Studium\Parsing\Mindmapper\MindmapperCoreTest\obj\Release\MindmapperCoreTest.pdb
