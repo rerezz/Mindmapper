@@ -120,10 +120,10 @@
   <data name="ERROR_ILLEGAL_CHAR" xml:space="preserve">
     <value>Illegal character {0} detected</value>
   </data>
+  <data name="ERROR_INVALID_ATTRIBUTE_COUNT" xml:space="preserve">
+    <value>Invalid number of given attributes (Attributelist: [{0}])</value>
+  </data>
   <data name="ERROR_INVALID_INSTRUCTION" xml:space="preserve">
     <value>Unknown instruction {0}</value>
-  </data>
-  <data name="ERROR_IVALID_ATTRIBUTE_COUNT" xml:space="preserve">
-    <value>Invalid number of given attributes (Attributelist: [{0}])</value>
   </data>
 </root>

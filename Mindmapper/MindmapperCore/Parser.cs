@@ -55,7 +55,7 @@ namespace MindmapperCore
             if (currentInstruction.AttributeCountMin > splittedProduction.Count - 1
                 || currentInstruction.AttributeCountMax < splittedProduction.Count - 1)
             {
-                throw new SyntaxException(String.Format(Messages.ERROR_IVALID_ATTRIBUTE_COUNT,currentInstruction.GetAttributeListString()));
+                throw new SyntaxException(String.Format(Messages.ERROR_INVALID_ATTRIBUTE_COUNT,currentInstruction.GetAttributeListString()));
             }
 
             // set attributes (do not loop over the instruction at position 0)
